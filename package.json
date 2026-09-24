@@ -1,0 +1,52 @@
+{
+  "name": "cyberops-defense-trainer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tactical Cyber Security, Networking & Ethical Hacking Training Suite for Windows",
+  "main": "electron.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=./",
+    "preview": "vite preview",
+    "start": "electron .",
+    "dist": "npm run build && electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^44.4.4",
+    "electron-builder": "^26.15.3",
+    "vite": "^5.1.4"
+  },
+  "build": {
+    "appId": "com.cyberops.defense.trainer",
+    "productName": "CyberOps Defense Trainer",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron.cjs",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "icon.ico",
+        "to": "icon.ico"
+      }
+    ],
+    "win": {
+      "icon": "icon.ico",
+      "target": [
+        "nsis"
+      ],
+      "artifactName": "CyberOps-Defense-Trainer-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "CyberOps Defense Trainer",
+      "uninstallDisplayName": "CyberOps Defense Trainer"
+    }
+  }
+}
