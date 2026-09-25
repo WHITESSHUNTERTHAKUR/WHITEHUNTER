@@ -48,5 +48,8 @@
       "shortcutName": "CyberOps Defense Trainer",
       "uninstallDisplayName": "CyberOps Defense Trainer"
     }
+  },
+  "dependencies": {
+    "openai": "^7.23.0"
   }
 }
