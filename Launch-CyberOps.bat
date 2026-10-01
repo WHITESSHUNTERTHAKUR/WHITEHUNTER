@@ -1,5 +1,5 @@
 @echo off
-title CYBEROPS DEFENSE COMMAND - Tactical Training Suite
+title CYBER WARRIORS LEARNING ACADEMY - Tactical Training Suite
 color 0b
 
 echo ======================================================================
@@ -9,7 +9,7 @@ echo  / /     // __/  / __/   / /__  / / / /\__ \  / /___
 echo / /___  // /___ / /___  / ___/ / /_/ /___/ / / /___    
 echo \____/_//_____//_____/ /_/     \____//____/  \____/_/  
 echo.
-echo     CYBEROPS: DEFENSE & TACTICAL SECURITY COMMAND
+echo     CYBER WARRIORS LEARNING ACADEMY
 echo     Training Suite for Cyber Security, Networking & Ethical Hacking
 echo ======================================================================
 echo.

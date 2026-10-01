@@ -918,3 +918,61 @@
   font-size: 13px;
   color: var(--cyan-glow);
 }
+
+/* =========================================
+   COMMANDS, VIDEOS & MAGAZINES ENHANCED STYLES
+========================================= */
+.command-card {
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.command-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  border-color: var(--border-active);
+}
+
+.video-card {
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+  border-color: var(--border-active);
+}
+
+.magazine-card {
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.magazine-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+  border-color: var(--border-active);
+}
+
+.btn-copy-cmd {
+  transition: all 0.2s ease;
+}
+
+.btn-copy-cmd:active {
+  transform: scale(0.96);
+}
+
+/* Light Mode Overrides for terminal boxes */
+[data-theme="light"] .command-card pre,
+[data-theme="light"] .tool-result-box {
+  background: #1e293b !important;
+  color: #38bdf8 !important;
+}
+
+[data-theme="light"] #video-modal-content,
+[data-theme="light"] #mag-modal-content {
+  background: #ffffff !important;
+  color: #1e293b !important;
+}
+

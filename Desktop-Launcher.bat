@@ -1,4 +1,3 @@
 @echo off
-title CYBEROPS DEFENSE COMMAND
-cd /d "C:\Users\SNC-SS\.gemini\antigravity-ide\scratch\cyberops-defense-trainer"
-start "" "CYBEROPS-Launcher.exe"
+title CYBER DEFENSE ACADEMY
+start "" "C:\Users\SNC-SS\AppData\Local\Programs\CyberOps Defense Trainer\CyberOps Defense Trainer.exe"

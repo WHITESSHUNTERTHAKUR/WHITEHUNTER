@@ -1,11 +1,15 @@
 node_modules/
 dist/
 release/
+temp_app_staging/
+app.asar
 *.log
+*.backup
+*backup*/
+src_backup*/
+src_before*/
 .DS_Store
 Thumbs.db
 .env
 .env.*
 !.env.example
-
-.env

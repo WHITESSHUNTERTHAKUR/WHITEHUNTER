@@ -13,11 +13,11 @@ export class DefenseStorage {
   // --- USER PROFILE & RANK ---
   static getUserProfile() {
     const defaultProfile = {
-      callsign: 'CYBER-DEFENDER',
-      name: 'Cadet Officer',
-      serviceBranch: 'Tri-Services Cyber Command',
-      clearanceLevel: 'SECRET // REL TO DEFENSE',
-      rank: 'Cyber Cadet',
+      callsign: 'CYBER-SEC-01',
+      name: 'Cyber Warrior Specialist',
+      serviceBranch: 'Cyber Warriors Learning Academy // Blue Team Operations',
+      clearanceLevel: 'TOP SECRET // CYBER WARRIORS',
+      rank: 'Cyber Warrior Trainee',
       xp: 0
     };
     try {
@@ -36,12 +36,15 @@ export class DefenseStorage {
   }
 
   static calculateRankFromXP(xp) {
-    if (xp >= 1500) return 'Chief Cyber Warfare Commander';
-    if (xp >= 1000) return 'Cyber Defense Commander';
-    if (xp >= 600)  return 'Cyber Warfare Officer';
-    if (xp >= 300)  return 'Tactical Security Specialist';
-    if (xp >= 100)  return 'Junior Cyber Analyst';
-    return 'Cyber Cadet';
+    if (xp >= 2000) return 'Chief Information Security Officer (CISO)';
+    if (xp >= 1500) return 'Cyber Warrior Lead';
+    if (xp >= 1100) return 'Security Architect';
+    if (xp >= 800)  return 'Senior Penetration Tester';
+    if (xp >= 550)  return 'Threat Hunter';
+    if (xp >= 350)  return 'Incident Responder';
+    if (xp >= 200)  return 'SOC Analyst (Tier 2)';
+    if (xp >= 100)  return 'Security Specialist';
+    return 'Cyber Warrior Trainee';
   }
 
   // --- TOPIC PROGRESS ---

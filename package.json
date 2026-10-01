@@ -1,5 +1,5 @@
 {
-  "name": "cyberops-defense-trainer",
+  "name": "cyber-warriors-learning-academy",
   "version": "1.0.0",
   "private": true,
   "description": "Tactical Cyber Security, Networking & Ethical Hacking Training Suite for Windows",
@@ -17,15 +17,15 @@
     "vite": "^5.1.4"
   },
   "build": {
-    "appId": "com.cyberops.defense.trainer",
-    "productName": "CyberOps Defense Trainer",
+    "appId": "com.cyberwarriors.learning.academy",
+    "productName": "CYBER WARRIORS LEARNING ACADEMY",
     "directories": {
       "output": "release"
     },
     "files": [
       "dist/**/*",
       "electron.cjs",
-      "package.json"
+      "preload.cjs"
     ],
     "extraResources": [
       {
@@ -38,18 +38,18 @@
       "target": [
         "nsis"
       ],
-      "artifactName": "CyberOps-Defense-Trainer-Setup-${version}.${ext}"
+      "artifactName": "Cyber-Warriors-Learning-Academy-Setup-${version}.${ext}"
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "CyberOps Defense Trainer",
-      "uninstallDisplayName": "CyberOps Defense Trainer"
+      "shortcutName": "CYBER WARRIORS LEARNING ACADEMY",
+      "uninstallDisplayName": "CYBER WARRIORS LEARNING ACADEMY"
     }
   },
   "dependencies": {
-    "openai": "^7.23.0"
+    "dotenv": "^18.0.3"
   }
 }

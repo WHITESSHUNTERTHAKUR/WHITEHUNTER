@@ -1,0 +1,165 @@
+﻿/* CyberOps Defense Trainer - Simple Clean UI */
+
+:root {
+  --v2-bg: #f5f7fa;
+  --v2-card: #ffffff;
+  --v2-text: #1f2937;
+  --v2-muted: #6b7280;
+  --v2-border: #e5e7eb;
+  --v2-primary: #2563eb;
+  --v2-primary-dark: #1d4ed8;
+  --v2-success: #16a34a;
+  --v2-warning: #d97706;
+  --v2-danger: #dc2626;
+}
+
+#cyberops-v2,
+#cyberops-v2 * {
+  font-family: Arial, Helvetica, sans-serif !important;
+  box-sizing: border-box;
+}
+
+#cyberops-v2 {
+  background: var(--v2-bg);
+  color: var(--v2-text);
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+#cyberops-v2 h1,
+#cyberops-v2 h2,
+#cyberops-v2 h3,
+#cyberops-v2 h4 {
+  font-family: Arial, Helvetica, sans-serif !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+#cyberops-v2 button {
+  font-family: Arial, Helvetica, sans-serif !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  cursor: pointer;
+}
+
+.v2-container {
+  width: min(1400px, calc(100% - 40px));
+  margin: auto;
+}
+
+.v2-card {
+  background: var(--v2-card);
+  border: 1px solid var(--v2-border);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.v2-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.v2-subtitle {
+  color: var(--v2-muted);
+  margin-top: 4px;
+}
+
+.v2-button {
+  border: 1px solid var(--v2-border);
+  background: white;
+  color: var(--v2-text);
+  padding: 9px 14px;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+.v2-button:hover {
+  background: #f3f4f6;
+}
+
+.v2-button.primary {
+  background: var(--v2-primary);
+  color: white;
+  border-color: var(--v2-primary);
+}
+
+.v2-button.primary:hover {
+  background: var(--v2-primary-dark);
+}
+
+.v2-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.v2-stat {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.v2-label {
+  color: var(--v2-muted);
+  font-size: 13px;
+}
+
+.v2-progress {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.v2-progress > div {
+  height: 100%;
+  background: var(--v2-primary);
+}
+
+.v2-nav {
+  background: white;
+  border-bottom: 1px solid var(--v2-border);
+}
+
+.v2-nav button {
+  background: transparent;
+  border: 0;
+  padding: 14px 12px;
+  color: var(--v2-muted);
+}
+
+.v2-nav button.active {
+  color: var(--v2-primary);
+  border-bottom: 2px solid var(--v2-primary);
+}
+
+.v2-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.v2-table th,
+.v2-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--v2-border);
+  text-align: left;
+}
+
+.v2-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+@media(max-width:700px) {
+  .v2-container {
+    width: calc(100% - 20px);
+  }
+
+  .v2-title {
+    font-size: 23px;
+  }
+}

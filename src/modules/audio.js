@@ -146,23 +146,42 @@ class CyberAudioEngine {
     } catch (e) {}
   }
 
-  // Read-Aloud Voice Synthesis for Training Q&A
-  speakText(text, onEnd) {
+  // Read-Aloud Voice Synthesis for Training Q&A and Practical Videos
+  speakText(text, onEnd, lang = 'en') {
     if (this.muted || !this.speechSynthesis) return;
     this.stopSpeaking();
     
-    // Strip markdown formatting characters
+    // Strip markdown and technical formatting
     const cleanText = text.replace(/[*#`_~[\]()]/g, ' ').replace(/\s+/g, ' ').trim();
-    
+    if (!cleanText) return;
+
     this.currentUtterance = new SpeechSynthesisUtterance(cleanText);
-    this.currentUtterance.rate = 1.05;
-    this.currentUtterance.pitch = 0.95;
+    const isHindi = lang && (lang.startsWith('hi') || lang === 'hindi');
     
-    // Choose an English voice if available
-    const voices = this.speechSynthesis.getVoices();
-    const preferredVoice = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Natural') || v.name.includes('Enhanced') || v.name.includes('David') || v.name.includes('George')));
-    if (preferredVoice) {
-      this.currentUtterance.voice = preferredVoice;
+    const voices = this.speechSynthesis.getVoices() || [];
+
+    if (isHindi) {
+      this.currentUtterance.lang = 'hi-IN';
+      this.currentUtterance.rate = 0.95;
+      this.currentUtterance.pitch = 1.0;
+      const hindiVoice = voices.find(v => 
+        (v.lang && v.lang.toLowerCase().startsWith('hi')) || 
+        (v.name && (v.name.toLowerCase().includes('hindi') || v.name.toLowerCase().includes('kalpana') || v.name.toLowerCase().includes('hemant')))
+      );
+      if (hindiVoice) {
+        this.currentUtterance.voice = hindiVoice;
+      }
+    } else {
+      this.currentUtterance.lang = 'en-US';
+      this.currentUtterance.rate = 1.05;
+      this.currentUtterance.pitch = 0.95;
+      const englishVoice = voices.find(v => 
+        v.lang && v.lang.startsWith('en') && 
+        (v.name.includes('Natural') || v.name.includes('Enhanced') || v.name.includes('David') || v.name.includes('George') || v.name.includes('Google US English'))
+      ) || voices.find(v => v.lang && v.lang.startsWith('en'));
+      if (englishVoice) {
+        this.currentUtterance.voice = englishVoice;
+      }
     }
     
     this.currentUtterance.onend = () => {
@@ -175,7 +194,11 @@ class CyberAudioEngine {
     };
     
     this.isSpeaking = true;
-    this.speechSynthesis.speak(this.currentUtterance);
+    try {
+      this.speechSynthesis.speak(this.currentUtterance);
+    } catch (e) {
+      this.isSpeaking = false;
+    }
   }
 
   stopSpeaking() {

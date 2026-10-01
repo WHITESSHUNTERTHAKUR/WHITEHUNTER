@@ -241,7 +241,7 @@ export function renderPerformanceReport(result, topic, container, onNavigate) {
       <!-- Printable Certificate Zone (Hidden on Screen, Visible on Print) -->
       <div id="certificate-print-zone" style="display: none;">
         <div class="cert-header">
-          <div class="cert-title">CYBER DEFENSE COMMAND TRAINING CERTIFICATE</div>
+          <div class="cert-title">CYBER WARRIORS LEARNING ACADEMY TRAINING CERTIFICATE</div>
           <div class="cert-subtitle">HEADQUARTERS TRI-SERVICES CYBER OPERATIONS // OFFICIAL EVALUATION RECORD</div>
         </div>
 
