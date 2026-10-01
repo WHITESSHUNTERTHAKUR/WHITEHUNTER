@@ -1,0 +1,14 @@
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.class
+
+# PyInstaller
+#  Usually these files are written by a pyinstaller command
+build/
+*.manifest
+
+# Virtual environments
+venv/
+env/
+.venv/
